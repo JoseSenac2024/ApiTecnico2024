@@ -1,0 +1,6 @@
+@ApiTecnico_HostAddress = http://localhost:5172
+
+GET {{ApiTecnico_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
