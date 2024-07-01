@@ -10,15 +10,17 @@ namespace YourNamespace
         public double Quantidade { get; set; }
         public string UnidadeMedida { get; set; }
         public decimal PrecoPorUnidade { get; set; }
+        public bool Perecivel { get; set; }
 
-        
-        public MateriaPrima(int id, string nome, double quantidade, string unidadeMedida, decimal precoPorUnidade)
+
+        public MateriaPrima(int id, string nome, double quantidade, string unidadeMedida, decimal precoPorUnidade, bool perecivel)
         {
             Id = id;
             Nome = nome;
             Quantidade = quantidade;
             UnidadeMedida = unidadeMedida;
             PrecoPorUnidade = precoPorUnidade;
+            Perecivel = perecivel;
         }
 
         
@@ -35,6 +37,7 @@ namespace YourNamespace
             Console.WriteLine($"Quantidade: {Quantidade} {UnidadeMedida}");
             Console.WriteLine($"Preço por Unidade: {PrecoPorUnidade:C}");
             Console.WriteLine($"Custo Total: {CalcularCustoTotal():C}");
+            Console.WriteLine(string.Concat("Perecivel: " , Perecivel ? "sim":"não"));
         }
     }
 }
